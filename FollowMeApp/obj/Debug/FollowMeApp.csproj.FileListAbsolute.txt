@@ -1,0 +1,16 @@
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\ApplicationIcon.png
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\Background.png
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\FollowMeApp.dll
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\FollowMeApp.pdb
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\AppManifest.xaml
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\FollowMeApp.xap
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\Microsoft.Phone.Controls.dll
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\Microsoft.Phone.Controls.xml
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Debug\ResolveAssemblyReference.cache
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Debug\App.g.i.cs
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Debug\MainPage.g.i.cs
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Debug\FollowMeApp.g.resources
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Debug\FollowMeApp.dll
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Debug\FollowMeApp.pdb
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Debug\XapCacheFile.xml
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\icons\appbar.feature.search.rest.png
