@@ -14,10 +14,10 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="False"
-    Language="ja-JP">
+    Language="ja-JP" Loaded="page_loaded">
 	<phone:PhoneApplicationPage.ApplicationBar>
 		<shell:ApplicationBar IsMenuEnabled="True">
-			<shell:ApplicationBarIconButton IconUri="/icons/appbar.feature.search.rest.png" Text="検索"/>
+			<shell:ApplicationBarIconButton IconUri="/icons/appbar.feature.search.rest.png" Text="検索" Click="search_clicked"/>
 		</shell:ApplicationBar>
 	</phone:PhoneApplicationPage.ApplicationBar>
 
@@ -25,24 +25,15 @@
     <Grid x:Name="LayoutRoot" Background="Transparent">
  
         <!--パノラマ コントロール-->
-        <controls:Panorama Title="Follow Me">
+        <controls:Panorama Title="follow me">
             <controls:Panorama.Background>
                 <ImageBrush ImageSource="PanoramaBackground.png"/>
             </controls:Panorama.Background>
  
             <!--パノラマ アイテム 1-->
-            <controls:PanoramaItem Header="Account">
+            <controls:PanoramaItem x:Name="profileItem" Header="Account">
+            	<TextBlock Height="96" Margin="129,0,15,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
                 <!--テキストの折り返しを行う 2 行リスト-->
-                <ListBox Margin="0,0,-12,0" ItemsSource="{Binding Items}">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Margin="0,0,0,17" Width="432" Height="78">
-                                <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
-                                <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
             </controls:PanoramaItem>
  
             <!--パノラマ アイテム 2-->

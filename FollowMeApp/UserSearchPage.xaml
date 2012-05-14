@@ -1,0 +1,56 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="FollowMeApp.UserSearchPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot は、すべてのページ コンテンツが配置されるルート グリッドです-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="0.236*"/>
+            <RowDefinition Height="0.764*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel は、アプリケーション名とページ タイトルを格納します-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="follow me" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="検索" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - 追加コンテンツをここに入力します-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,-8,12,8" Grid.RowSpan="2">
+        	<Grid.RowDefinitions>
+        		<RowDefinition Height="0.096*"/>
+        		<RowDefinition Height="0.091*"/>
+        		<RowDefinition Height="0.814*"/>
+        	</Grid.RowDefinitions>
+        	<TextBlock Margin="8,8,0,8" TextWrapping="Wrap" Text="ユーザーIDを入力してください。" FontSize="26.667"/>
+        	<TextBox x:Name="UserIdBox" Grid.Row="1" TextWrapping="Wrap" Margin="0,0,0,-18" InputScope="EmailUserName"/>
+        	<Grid HorizontalAlignment="Left" Height="47" Margin="17,22,0,0" Grid.Row="2" VerticalAlignment="Top" Width="152">
+        		<Button x:Name="SearchButton" Content="検索" Margin="0,0,6,-32" Click="searchButtonClocked"/>
+        	</Grid></Grid>
+    </Grid>
+ 
+    <!--ApplicationBar の使用法を示すサンプル コード-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
