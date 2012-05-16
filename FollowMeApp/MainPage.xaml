@@ -15,6 +15,20 @@
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="False"
     Language="ja-JP" Loaded="page_loaded">
+	<phone:PhoneApplicationPage.Resources>
+		<DataTemplate x:Key="ItemTemplate">
+			<StackPanel Orientation="Horizontal" Margin="0,0,0,30">
+				<Image HorizontalAlignment="Left" Height="73" Width="73" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Source="{Binding ProfileImage}">
+					<Image.RenderTransform>
+						<CompositeTransform Rotation="0.114"/>
+					</Image.RenderTransform>
+				</Image>
+				<StackPanel Orientation="Vertical" Margin="20,0,0,0" Width="258">
+					<TextBlock MaxHeight="80" TextTrimming="WordEllipsis" TextWrapping="Wrap" Text="{Binding Text}"/>
+				</StackPanel>
+			</StackPanel>
+		</DataTemplate>
+	</phone:PhoneApplicationPage.Resources>
 	<phone:PhoneApplicationPage.ApplicationBar>
 		<shell:ApplicationBar IsMenuEnabled="True">
 			<shell:ApplicationBarIconButton IconUri="/icons/appbar.feature.search.rest.png" Text="検索" Click="search_clicked"/>
@@ -22,7 +36,7 @@
 	</phone:PhoneApplicationPage.ApplicationBar>
 
     <!--LayoutRoot は、すべてのページ コンテンツが配置されるルート グリッドです-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="Transparent" DataContext="{Binding Source={StaticResource UserTimeLine}}">
  
         <!--パノラマ コントロール-->
         <controls:Panorama Title="follow me">
@@ -38,22 +52,9 @@
  
             <!--パノラマ アイテム 2-->
             <!--'Orientation="Horizontal"' 使用して、水平方向にレイアウトするパネルを有効にします-->
-            <controls:PanoramaItem Header="TimeLine">
+            <controls:PanoramaItem Header="TimeLine" Width="472">
+            	<ListBox x:Name="userTimeLineList" ItemTemplate="{StaticResource ItemTemplate}" ItemsSource="{Binding Collection}" Height="426"/>
                 <!--イメージ プレースホルダーを表示し、テキストの折り返しを行う 2 行リスト-->
-                <ListBox Margin="0,0,-12,0" ItemsSource="{Binding Items}">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal" Margin="0,0,0,17">
-                                <!--四角形をイメージに置き換えます-->
-                                <Rectangle Height="100" Width="100" Fill="#FFE5001b" Margin="12,0,9,0"/>
-                                <StackPanel Width="311">                                    
-                                    <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
-                                    <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
-                                </StackPanel>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
             </controls:PanoramaItem>
         </controls:Panorama>
     </Grid>

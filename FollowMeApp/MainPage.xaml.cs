@@ -4,6 +4,11 @@ using Microsoft.Phone.Controls;
 using System.Diagnostics;
 using System.IO;
 using System.IO.IsolatedStorage;
+using System.Net;
+using Microsoft.Phone.Reactive;
+using System.Runtime.Serialization.Json;
+using System.Text;
+using System.Collections.Generic;
 
 namespace FollowMeApp
 {
@@ -51,7 +56,7 @@ namespace FollowMeApp
                 if (store.Contains(User_ID_Key))
                 {
                     //前回、ユーザーIDをを入力した
-                    setPageContext((string)store[MainPage.User_ID_Key]);
+                    requestTwitter((string)store[MainPage.User_ID_Key]);
                 }
                 else
                 {
@@ -61,7 +66,7 @@ namespace FollowMeApp
             }
             else if (e.NavigationMode == System.Windows.Navigation.NavigationMode.Back)
             {
-                setPageContext((string)store[MainPage.User_ID_Key]);
+                requestTwitter((string)store[MainPage.User_ID_Key]);
             }
         }
 
@@ -78,16 +83,78 @@ namespace FollowMeApp
         }
 
         /// <summary>
-        /// ページの表示内容を切り替える
+        /// Twitterにリクエストを送る
         /// </summary>
         /// <param name="userId">The user id.</param>
-        private void setPageContext(string userId)
+        private void requestTwitter(string userId)
         {
             //TODO: １個目のパノラマのタイトルをユーザーIDに変える
             profileItem.Header = userId;
             //TODO: Twitterにアクセスして、データを得る
-            //TODO: データを解析する
-            //TODO: 解析結果を表示する
+            var twitterUrl = buildTwitterUri(userId);
+            Debug.WriteLine(twitterUrl.Uri);
+            WebRequest.Create(twitterUrl.Uri)
+                .DownloadStringAsync()
+                .ObserveOnDispatcher()
+                .Subscribe(
+                    str => parserJson(str),
+                    e => MessageBox.Show("エラ-.ユーザー名,通信状況を確認してください."));
         }
+
+        /// <summary>
+        /// JSONを解析する
+        /// </summary>
+        /// <param name="json">The json.</param>
+        private void parserJson(string json)
+        {
+            //TODO: データを解析するU
+            var serializer = new DataContractJsonSerializer(typeof(TwitterRoot[]));
+            var twitter = (TwitterRoot[])serializer.ReadObject(new MemoryStream(Encoding.Unicode.GetBytes(json)));
+            Debug.WriteLine(twitter[0].text);
+            //TODO: 解析結果を表示する
+            List<UserTimeLine> timeLine = new List<UserTimeLine>();
+            foreach (TwitterRoot tweet in twitter)
+            {
+                timeLine.Add(new UserTimeLine() { Text = tweet.text, ProfileImage = tweet.user.profile_image_url });
+            }
+            userTimeLineList.ItemsSource = timeLine;
+        }
+
+        /// <summary>
+        /// Builds the twitter URI.
+        /// </summary>
+        /// <param name="userId">The user id.</param>
+        /// <returns></returns>
+        private UriBuilder buildTwitterUri(string userId)
+        {
+            var twitterUrl = new UriBuilder("https", "api.twitter.com");
+            twitterUrl.Path = "/1/statuses/user_timeline.json";
+            var screeNameQuery = "screen_name=" + userId;
+            var countQuery = "count=20";
+            twitterUrl.Query = screeNameQuery + "&" + countQuery;
+            return twitterUrl;
+        }
+    }
+
+    public static class WebRequestExtensions
+    {
+        public static IObservable<string> DownloadStringAsync(this WebRequest request)
+        {
+            return Observable.FromAsyncPattern<WebResponse>(request.BeginGetResponse, request.EndGetResponse)()
+                .Select(res =>
+                    {
+                        using (var stream = res.GetResponseStream())
+                        using (var sr = new StreamReader(stream))
+                        {
+                            return sr.ReadToEnd();
+                        }
+                    });
+        }
+    }
+
+    public class UserTimeLine
+    {
+        public string ProfileImage { get; set; }
+        public string Text { get; set; }
     }
 }

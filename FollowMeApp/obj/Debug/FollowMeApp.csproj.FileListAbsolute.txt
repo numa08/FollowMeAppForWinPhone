@@ -12,11 +12,11 @@
 \\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Debug\FollowMeApp.pdb
 \\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Debug\XapCacheFile.xml
 \\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\icons\appbar.feature.search.rest.png
-\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Debug\App.g.i.cs
-\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Debug\MainPage.g.i.cs
-\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Debug\SearchPage.g.i.cs
 \\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\Microsoft.Expression.Controls.dll
 \\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\Microsoft.Expression.Drawing.dll
 \\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\Microsoft.Expression.Controls.xml
 \\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\Microsoft.Expression.Drawing.xml
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Debug\App.g.i.cs
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Debug\MainPage.g.i.cs
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Debug\SearchPage.g.i.cs
 \\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Debug\UserSearchPage.g.i.cs

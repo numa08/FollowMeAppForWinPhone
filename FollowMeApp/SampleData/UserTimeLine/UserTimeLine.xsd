@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+      *********    このファイルを編集しないでください     *********
+      このファイルはデザイン ツールにより作成されました。
+      このファイルに変更を加えるとエラーが発生する場合があります。
+-->
+<xs:schema xmlns:tns="Expression.Blend.SampleData.UserTimeLine" xmlns:blend="http://schemas.microsoft.com/expression/blend/2008" targetNamespace="Expression.Blend.SampleData.UserTimeLine" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="UserTimeLine" type="tns:UserTimeLine" />
+  <xs:complexType name="UserTimeLine">
+    <xs:sequence>
+      <xs:element name="Collection" type="tns:ItemCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ItemCollection">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="Item" type="tns:Item" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Item">
+    <xs:attribute name="ProfileImage" type="tns:Basic-Image" />
+    <xs:attribute blend:FormatParameters="100,12" name="Text" type="xs:string" />
+  </xs:complexType>
+  <xs:simpleType name="Basic-Image">
+    <xs:restriction base="xs:anyURI" />
+  </xs:simpleType>
+</xs:schema>
