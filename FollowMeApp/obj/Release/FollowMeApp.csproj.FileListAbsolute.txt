@@ -20,3 +20,10 @@
 \\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Release\FollowMeApp.dll
 \\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Release\FollowMeApp.pdb
 \\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Release\XapCacheFile.xml
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Release\ImageTools.dll
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Release\ImageTools.IO.Gif.dll
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Release\ImageTools.IO.Png.dll
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Release\ImageTools.Utils.dll
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Release\PhoneCodeContractsAssemblies.dll
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Release\SharpZipLib.WindowsPhone7.dll
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Release\ICSharpCode.SharpZLib.Phone.dll

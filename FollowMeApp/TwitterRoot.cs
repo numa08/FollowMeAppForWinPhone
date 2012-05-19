@@ -21,9 +21,11 @@ namespace FollowMeApp
     public class User
     {
         public string name { get; set; }
+        public string description { get; set; }
         public string screen_name { get; set; }
         public string url { get; set; }
         public bool _protected { get; set; }
         public string profile_image_url { get; set; }
+        public string profile_background_image_url { get; set; }
     }
 }

@@ -1,13 +1,20 @@
-﻿<xapCache source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Release\FollowMeApp.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="2012/05/16 23:37:30">
-  <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Release\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="2012/05/14 23:25:39" />
-  <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Background.png" archivePath="Background.png" lastWriteTime="2012/05/07 23:15:14" />
-  <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="2012/05/07 23:15:14" />
-  <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Release\FollowMeApp.dll" archivePath="FollowMeApp.dll" lastWriteTime="2012/05/16 23:37:29" />
+﻿<xapCache source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Release\FollowMeApp.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="2012/05/19 0:25:21">
+  <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Release\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="2012/05/19 0:14:45" />
+  <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Background.png" archivePath="Background.png" lastWriteTime="2012/05/18 23:41:59" />
+  <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="2012/05/18 23:41:58" />
+  <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Release\FollowMeApp.dll" archivePath="FollowMeApp.dll" lastWriteTime="2012/05/19 0:25:19" />
+  <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\ImageTools.dll" archivePath="ImageTools.dll" lastWriteTime="2010/10/12 1:05:23" />
+  <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\ImageTools.IO.Gif.dll" archivePath="ImageTools.IO.Gif.dll" lastWriteTime="2010/10/12 1:06:10" />
+  <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\ImageTools.IO.Png.dll" archivePath="ImageTools.IO.Png.dll" lastWriteTime="2010/10/12 1:05:31" />
+  <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\ImageTools.Utils.dll" archivePath="ImageTools.Utils.dll" lastWriteTime="2010/10/12 1:05:39" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\Microsoft.Expression.Controls.dll" archivePath="Microsoft.Expression.Controls.dll" lastWriteTime="2011/08/17 1:48:22" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="2011/08/29 22:49:08" />
+  <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\PhoneCodeContractsAssemblies.dll" archivePath="PhoneCodeContractsAssemblies.dll" lastWriteTime="2010/10/10 21:40:57" />
+  <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\SharpZipLib.WindowsPhone7.dll" archivePath="SharpZipLib.WindowsPhone7.dll" lastWriteTime="2010/08/13 23:59:46" />
+  <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\ICSharpCode.SharpZLib.Phone.dll" archivePath="ICSharpCode.SharpZLib.Phone.dll" lastWriteTime="2010/10/10 21:40:58" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\Microsoft.Expression.Drawing.dll" archivePath="Microsoft.Expression.Drawing.dll" lastWriteTime="2011/08/17 1:48:22" />
   <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\icons\appbar.feature.search.rest.png" archivePath="icons\appbar.feature.search.rest.png" lastWriteTime="2011/08/29 22:47:42" />
   <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="2012/05/07 23:15:14" />
-  <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2012/05/14 23:25:39" />
+  <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2012/05/19 0:14:45" />
   <file source="\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Release\icons\appbar.feature.search.rest.png" archivePath="icons\appbar.feature.search.rest.png" lastWriteTime="2011/08/29 22:47:42" />
 </xapCache>

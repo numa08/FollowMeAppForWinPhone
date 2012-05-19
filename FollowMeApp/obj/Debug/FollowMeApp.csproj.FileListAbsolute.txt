@@ -20,3 +20,10 @@
 \\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Debug\MainPage.g.i.cs
 \\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Debug\SearchPage.g.i.cs
 \\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\obj\Debug\UserSearchPage.g.i.cs
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\ImageTools.dll
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\ImageTools.IO.Gif.dll
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\ImageTools.IO.Png.dll
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\ImageTools.Utils.dll
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\PhoneCodeContractsAssemblies.dll
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\SharpZipLib.WindowsPhone7.dll
+\\YORIKO\numanuma08\Visual Studio Workspace\FollowMeApp\FollowMeApp\Bin\Debug\ICSharpCode.SharpZLib.Phone.dll

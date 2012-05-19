@@ -28,6 +28,11 @@
 				</StackPanel>
 			</StackPanel>
 		</DataTemplate>
+		<DataTemplate x:Key="TitleTemplate">
+			<Grid>
+				<TextBlock TextWrapping="Wrap" Text="ついっQR" d:LayoutOverrides="Width, Height" Margin="0,37,0,-37"/>
+			</Grid>
+		</DataTemplate>
 	</phone:PhoneApplicationPage.Resources>
 	<phone:PhoneApplicationPage.ApplicationBar>
 		<shell:ApplicationBar IsMenuEnabled="True">
@@ -36,17 +41,30 @@
 	</phone:PhoneApplicationPage.ApplicationBar>
 
     <!--LayoutRoot は、すべてのページ コンテンツが配置されるルート グリッドです-->
-    <Grid x:Name="LayoutRoot" Background="Transparent" DataContext="{Binding Source={StaticResource UserTimeLine}}">
+    <Grid x:Name="LayoutRoot" Background="Transparent" >
  
         <!--パノラマ コントロール-->
-        <controls:Panorama Title="follow me">
-            <controls:Panorama.Background>
-                <ImageBrush ImageSource="PanoramaBackground.png"/>
+        <controls:Panorama x:Name="PanoramaRoot" Title="ついっQR" TitleTemplate="{StaticResource TitleTemplate}">
+            <controls:Panorama.Background >
+                <ImageBrush   ImageSource="CG006.jpg" x:Name="BacgroundImage"/>
             </controls:Panorama.Background>
  
             <!--パノラマ アイテム 1-->
             <controls:PanoramaItem x:Name="profileItem" Header="Account">
-            	<TextBlock Height="96" Margin="129,0,15,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+            	<Grid Margin="0,0,1,-1">
+            		<Grid.ColumnDefinitions>
+            			<ColumnDefinition Width="0.303*"/>
+            			<ColumnDefinition Width="0.697*"/>
+            		</Grid.ColumnDefinitions>
+            		<Grid.RowDefinitions>
+            			<RowDefinition Height="0.279*"/>
+            			<RowDefinition Height="0.33*"/>
+            			<RowDefinition Height="0.391*"/>
+            		</Grid.RowDefinitions>
+            		<Image x:Name="profileImage" Width="73" Height="73" d:LayoutOverrides="VerticalAlignment" Margin="23,29,31,17"/>
+            		<TextBlock x:Name="profileText" Grid.Column="1" Margin="8,0,8,-20" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="131" TextTrimming="WordEllipsis"/>
+            		<Image x:Name="qrImage" Grid.Column="1" Grid.Row="1" Width="117" HorizontalAlignment="Left" Margin="8,24,0,0" Height="117"/>
+            	</Grid>
                 <!--テキストの折り返しを行う 2 行リスト-->
             </controls:PanoramaItem>
  
@@ -57,5 +75,6 @@
                 <!--イメージ プレースホルダーを表示し、テキストの折り返しを行う 2 行リスト-->
             </controls:PanoramaItem>
         </controls:Panorama>
+        <ProgressBar Name="progressBar" HorizontalAlignment="Left" Height="10" VerticalAlignment="Top" Width="480" IsIndeterminate="True" Visibility="Collapsed" />
     </Grid>
 </phone:PhoneApplicationPage>
