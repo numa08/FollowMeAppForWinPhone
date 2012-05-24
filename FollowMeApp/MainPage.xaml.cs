@@ -18,6 +18,7 @@ namespace FollowMeApp
     public partial class MainPage : PhoneApplicationPage
     {
         public static string User_ID_Key = "user_id";
+        private static string TWITTER_URL = "http://twitter.com/";
         IsolatedStorageSettings store;
         // コンストラクター
         public MainPage()
@@ -122,9 +123,19 @@ namespace FollowMeApp
         private void onLoadTwitter(string json)
         {
             var twitterDate = parserJson(json);
-            showResult(twitterDate);
+            //データチェック後、表示処理
+            if (isOk(twitterDate))
+            {
+                showResult(twitterDate);
+                //TODO プログレスバーを終わる
+                progressBar.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
             //TODO プログレスバーを終わる
             progressBar.Visibility = Visibility.Collapsed;
+            MessageBox.Show("エラー.データの取得ができません.");
+            }
         }
 
         /// <summary>
@@ -136,6 +147,18 @@ namespace FollowMeApp
             //TODO: データを解析するU
             var serializer = new DataContractJsonSerializer(typeof(TwitterRoot[]));
             return (TwitterRoot[])serializer.ReadObject(new MemoryStream(Encoding.Unicode.GetBytes(json)));
+        }
+
+        /// <summary>
+        ///取得したデータが正常かどうか判断する
+        /// </summary>
+        /// <param name="dataArray">取得したデータ</param>
+        /// <returns>
+        ///   <c>true</c> データの配列が存在する <c>false</c>.
+        /// </returns>
+        private bool isOk(TwitterRoot[] dataArray)
+        {
+            return dataArray.Length > 0;
         }
 
         /// <summary>
@@ -151,7 +174,7 @@ namespace FollowMeApp
             profileItem.Header = twitter.user.screen_name;
 
             //背景画像を表示する
-            BacgroundImage.ImageSource = getBitmap(new Uri(twitter.user.profile_background_image_url));
+            //BacgroundImage.ImageSource = getBitmap(new Uri(twitter.user.profile_background_image_url));
 
             //自己紹介文の表示
             profileText.Text = twitterDataArray[0].user.description;
@@ -160,7 +183,8 @@ namespace FollowMeApp
             profileImage.Source = getBitmap(new Uri(twitter.user.profile_image_url));
 
             //QRコードの表示
-            var qrCodeUri = buildQrCodeUri(twitterDataArray[0].user.url);
+            var qrCodeUri = buildQrCodeUri(TWITTER_URL + twitter.user.screen_name);
+            Debug.WriteLine(qrCodeUri.Uri);
             qrImage.Source = new BitmapImage(qrCodeUri.Uri);
 
 
